@@ -1,0 +1,42 @@
+<div class="shopping-cart-main">
+    <shopping-cart-list-header item-count="4"></shopping-cart-list-header>
+    <div class="shopping-list">
+        <div ng-repeat="cartItem in cartList track by cartItem.p_id">
+            <div class="row shopping-item">
+                <div class="col-lg-2">
+                    <img class="img-responsive" src="images/P1.jpg" />
+                </div>
+                <div class="col-lg-10">
+                    <div class="row">
+                        <div class="col-lg-9 shopping-item-details">
+                            <h6 class="shopping-item-name">{{cartItem.p_name|uppercase}}</h6>
+                            <h6 class="shopping-item-style">Style#: {{cartItem.p_style|uppercase}}</h6>
+                            <span class="small">Color:{{cartItem.p_selected_color.name|uppercase}}</span>
+                        </div>
+                        <div class="col-lg-1">
+                            <h6 class="shopping-item-size">{{cartItem.p_selected_size.code|uppercase}}</h6>
+                        </div>
+                        <div class="col-lg-1">
+                            <h6 class="shopping-item-qty">{{cartItem.p_quantity}}</h6>
+                        </div>
+                        <div class="col-lg-1">
+                            <h6 class="shopping-item-price"><span class="shopping-item-currency">{{cartItem.c_currency}}</span>
+                            <span class="shopping-item-amount">
+								{{cartItem.p_price}}
+							</span></h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="shopping-item-action-container col-lg-5">
+                            <a ng-click="editItem(cartItem.p_id)">EDIT</a>
+                            <a ng-click=deleteItem(cartItem.p_id)>X REMOVE</a>
+                            <a href="">SAVE FOR LATER</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+    <shopping-cart-footer sub-total="{{totalCartAmount()}}" discount-applied="{{totalDiscount()}}"></shopping-cart-footer>
+</div>
