@@ -1,0 +1,42 @@
+<div class="shopping-cart-main">
+    <shopping-cart-list-header item-count="4"></shopping-cart-list-header>
+    <div class="shopping-list">
+        <div ng-repeat="cartItem in cartList track by cartItem.p_id">
+            <div class="row shopping-item">
+                <div class="col-lg-2 col-xs-6">
+                    <img class="img-responsive" src="images/P1.jpg" />
+                </div>
+                <div class="col-lg-10 col-xs-6">
+                    <div class="row">
+                        <div class="col-lg-9 shopping-item-details">
+                            <h6 class="shopping-item-name"><strong>{{cartItem.p_name|uppercase}}</strong></h6>
+                            <h6 class="shopping-item-style silver-color">Style#: {{cartItem.p_style|uppercase}}</h6>
+                            <span class="small silver-color">Color:{{cartItem.p_selected_color.name|uppercase}}</span>
+                        </div>
+                        <div class="col-lg-1 col-xs-12">
+                            <h6 class="shopping-item-size silver-color"><span class="visible-xs">Size:&nbsp;</span>{{cartItem.p_selected_size.code|uppercase}}</h6>
+                        </div>
+                        <div class="col-lg-1">
+                            <h6 class="shopping-item-qty"><span class="visible-xs">QTY:&nbsp;</span>{{cartItem.p_quantity}}</h6>
+                        </div>
+                        <div class="col-lg-1">
+                            <h6 class="shopping-item-price"><span class="shopping-item-currency">{{cartItem.c_currency}}</span>
+                            <span class="shopping-item-amount">
+								{{cartItem.p_price}}
+							</span></h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="shopping-item-action-container col-lg-5">
+                            <a ng-click="editItem(cartItem.p_id)">EDIT</a>
+                            <a ng-click=deleteItem(cartItem.p_id)>X REMOVE</a>
+                            <a href="">SAVE FOR LATER</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+    <shopping-cart-footer sub-total="{{totalCartAmount()}}" discount-applied="{{totalDiscount()}}"></shopping-cart-footer>
+</div>

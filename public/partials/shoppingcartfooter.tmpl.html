@@ -1,0 +1,68 @@
+<div class="row shopping-cart-footer">
+        <div class="col-lg-3 hidden-xs">
+            <h5><strong>Need help or have any questions?</strong></h5>
+            <h6>Call customer service at 1-800-555-5555</h6>
+            <h6 class="text-underline"><a href="">Chat with one of our stylists</a></h6>
+            <h6 class="text-underline"><a href="">See return &amp; exchange policy</a></h6>
+        </div>
+        <div class="col-lg-offset-1 col-lg-8 col-xs-12">
+            <div class="row">
+                <div class="col-lg-7"><span>Enter promotion code code or gift card</span></div>
+                <div class="col-lg-5">
+                    <form class="form form-inline">
+                        <div class="form-group">
+                            <label class="sr-only" for="email">Coupon code
+                            </label>
+                            <input type="" name="" placeholder="Enter coupon code" class="form-control" />
+                        </div>
+                        <button class="btn btn-default btn-md">APPLY</button>
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-lg-11 col-xs-6">
+                    <h6>SUBTOTAL</h6></div>
+                <div class="col-lg-1 col-xs-6">
+                    <h6 class="shopping-item-amount">${{subTotal}}</h6></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-11 col-xs-6">
+                    <h6>PROMOTION CODE JF10 APPLIED</h6></div>
+                <div class="col-lg-1 col-xs-6">
+                    <h6 class="shopping-item-amount">-${{discountApplied}}</h6></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-11 col-xs-6">
+                    <h6>ESTIMATED SHIPPING*</h6>
+                    <span class="silver-color">You qualify for free shipping because your order is over $50*</span>
+                </div>
+                <div class="col-lg-1 col-xs-6">
+                    <h6>FREE</h6>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 col-xs-6">
+                    <h5>ESTIMATED TOTAL</h5><span class="silver-color">Tax will be applied during checkout</span></div>
+                <div class="col-lg-2 col-xs-6">
+                    <h3 class="shopping-item-amount"><strong>${{subTotal-discountApplied}}</strong></h3>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+            	<div class="col-lg-offset-6 col-lg-3">
+            		<a href="">CONTINUE SHOPPING</a>
+            		
+            	</div>
+            	<div class="col-lg-3">
+            		<button class="btn btn-primary btn-block">CHECKOUT</button>
+            	</div>
+            </div>
+            <div class="row">
+            <div class="col-lg-6 pull-right">
+                <img src="/images/lock.jpg" />
+                <span>Secure checkout. Shopping is always safe &amp; secure.</span>
+                </div>
+            </div>
+        </div>
+    </div>

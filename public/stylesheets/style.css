@@ -1,0 +1,33 @@
+body {
+  color:#4d4d4d;
+}
+
+a,a:visited{
+	color:#4d4d4d;
+}
+
+.shopping-item-amount{
+	text-align: right;
+	font-family: Georgia;
+}
+.text-underline{
+	text-decoration: underline;
+}
+
+.silver-color{
+	color:#C0C0C0;
+}
+.shopping-item-action-container>a::after{
+	content:' | ';
+}
+.shopping-item-action-container>a:last-child::after {
+	content:'';
+}
+@media (max-width:767px){
+	span.visible-xs{
+		display: inline !important;
+	}
+	.shopping-item-amount{
+		font-size: 20px;
+	}
+}
