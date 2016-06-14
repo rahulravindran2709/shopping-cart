@@ -1,16 +1,15 @@
 <div class="shopping-cart-main">
-    <shopping-cart-list-header item-count="4"></shopping-cart-list-header>
+    <shopping-cart-list-header item-count="{{cartList.length}}"></shopping-cart-list-header>
     <div class="shopping-list">
         <div ng-repeat="cartItem in cartList track by cartItem.p_id">
             <div class="row shopping-item">
-<<<<<<< HEAD
                 <div class="col-lg-2 col-xs-6">
-                    <img class="img-responsive" src="images/P1.jpg" />
+                    <img class="img-responsive" ng-src="images/T{{$index+1}}.jpg" />
                 </div>
                 <div class="col-lg-10 col-xs-6">
                     <div class="row">
                         <div class="col-lg-9 shopping-item-details">
-                            <h6 class="shopping-item-name"><strong>{{cartItem.p_name|uppercase}}</strong></h6>
+                            <h4 class="shopping-item-name"><strong>{{cartItem.p_name|uppercase}}</strong></h4>
                             <h6 class="shopping-item-style silver-color">Style#: {{cartItem.p_style|uppercase}}</h6>
                             <span class="small silver-color">Color:{{cartItem.p_selected_color.name|uppercase}}</span>
                         </div>
@@ -29,9 +28,9 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="shopping-item-action-container col-lg-5">
+                        <div class="shopping-item-action-container col-lg-5 ">
                             <a ng-click="editItem(cartItem.p_id)">EDIT</a>
-                            <a ng-click=deleteItem(cartItem.p_id)>X REMOVE</a>
+                            <a ng-click="deleteItem(cartItem.p_id)">X REMOVE</a>
                             <a href="">SAVE FOR LATER</a>
                         </div>
                     </div>

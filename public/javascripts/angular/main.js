@@ -2,7 +2,8 @@
     var app = angular.module('ShoppingApp', ['ngRoute']);
 
 
-    app.config(['$routeProvider', function($routeProvider) {
+    app.config(['$routeProvider','$locationProvider', function($routeProvider,$locationProvider) {
+        $locationProvider.html5Mode(true).hashPrefix('*');
         $routeProvider.when('/', {
             controller: 'MainController',
             templateUrl: '/partials/shoppingcartmain.tmpl.html',

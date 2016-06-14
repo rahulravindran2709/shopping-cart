@@ -1,19 +1,21 @@
 body {
   color:#4d4d4d;
+  font-family: 'Oswald', sans-serif;
 }
 
 a,a:visited{
 	color:#4d4d4d;
 }
-
 .shopping-item-amount{
 	text-align: right;
-	font-family: Georgia;
+	font-family: 'Montserrat', sans-serif;
 }
 .text-underline{
 	text-decoration: underline;
 }
-
+.broad-hr{
+	border-top-width:5px;
+}
 .silver-color{
 	color:#C0C0C0;
 }
